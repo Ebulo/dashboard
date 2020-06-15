@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Landing_Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/css/landing_page1.css'>
+    
+</head>
+<body>
+    {% block nav %}
+    <nav class="nav">
+        <div class="main">
+            <div class="logo">
+                <a href="/" style="text-decoration: none; color: white;">YfsThinks</a>
+            </div>
+            <div class="elements">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Support</a></li>
+            </div>
+            <div class="acc">
+                <a href="/account" class="acc_btn" id="nav_btn">
+                    Account
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    {% endblock %}
+
+    <div class="first_img">
+        <!-- <img src="../static/img/space.png" alt="first_img"> -->
+    </div>
+
+
+
+</body>
+</html>

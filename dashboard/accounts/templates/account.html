@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login/Register</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/css/account.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    {% block nav %}
+    
+    {% endblock %}
+
+    <form id="login" class="input-group" action="/account/login/" method="POST">
+        {% csrf_token %}
+        <input type="text" class="input-field" name="username" placeholder="User Id" required>
+
+        <input type="password" class="input-field" name="password" placeholder="Password" required>
+
+        <button type="submit" class="submit-btn">Login</button>
+    </form>
+
+    <br><br>
+
+    <form id="register" class="input-group" action="/account/register/" method="POST">
+        {% csrf_token %}
+        <input type="text" class="input-field" name="first_name" placeholder="Name*"
+        required>
+        <input type="text" class="input-field" name="username" placeholder="User Id*"
+        required>
+        <input type="email" class="input-field" name="email" placeholder="email*"
+        required>
+        <input type="phone" class="input-field" name="Phone" placeholder="Phone*"
+        required>
+        <input type="password" class="input-field" name="password1" placeholder="Password*"
+        required>
+        <input type="password" class="input-field" name="password2" placeholder="confirm Password*"
+        required>
+        <button type="submit" class="submit-btn">Register</button>
+    </form>
+
+    <br><br>
+
+    <form id="merchant_register" class="input-group" action="/account/merchant_register/" method="POST">
+        {% csrf_token %}
+        <input type="text" class="input-field" name="first_name" placeholder="Name*"
+        required>
+        <input type="text" class="input-field" name="username" placeholder="User Id*"
+        required>
+        <input type="email" class="input-field" name="email" placeholder="email*"
+        required>
+        <input type="phone" class="input-field" name="phone" placeholder="Phone*"
+        required>
+
+        <input type="number" class="input-field" name="adhar" placeholder="Aadhar Card Number*"
+        required>
+        <input type="number" class="input-field" name="gstin" placeholder="GSTIN Number*"
+        required>
+        <input type="number" class="input-field" name="bank" placeholder="Bank Account Number*"
+        required>
+        <input type="text" class="input-field" name="acc_name" placeholder="Account Holder's Name*"
+        required>
+        <input type="text" class="input-field" name="ifsc" placeholder="IFSC Code*"
+        required>
+        
+        <input type="password" class="input-field" name="password1" placeholder="Password*"
+        required>
+        <input type="password" class="input-field" name="password2" placeholder="confirm Password*"
+        required>
+        <button type="submit" class="submit-btn">Register</button>
+    </form>
+
+
+
+</body>
+</html>

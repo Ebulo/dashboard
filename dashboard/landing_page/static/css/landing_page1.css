@@ -1,0 +1,120 @@
+*
+{
+    background-color: #cec;
+    margin: 0;
+    padding: 0;
+}
+/* body
+{
+
+} */
+nav
+{
+    /* overflow: hidden; */
+    position: fixed;
+}
+nav .main
+{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 60px;
+    /* border-bottom: solid 0.01px #000; */
+    display: flex;
+    flex-direction: column;
+    background: rgb(175, 243, 175);
+}
+nav .main:before
+{
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 60px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(175, 243, 175);
+    filter: blur(20px);
+    z-index: -1;
+}
+nav .main .logo
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    size: 40px;
+    left: 10px;
+}
+nav .main .elements
+{
+    background-color: rgb(175, 243, 175);
+    list-style: none;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-self: center;
+
+}
+nav .main .elements li
+{ 
+    margin: 10px;
+    list-style: none;
+}
+nav .main .elements a
+{
+    background: rgb(173, 255, 172);
+    padding: 8px;
+    /* border-bottom: .1px solid #000; */
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0, 0.2),
+                -5px -5px 5px rgba(255, 255, 255, 0);
+    text-decoration: none;
+    color: #267701;
+}
+nav .main .elements a:hover
+{
+    background: rgb(173, 255, 172);
+    /* 175, 243, 175 */
+    padding: 8px;
+    /* border-bottom: .1px solid #000; */
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0),
+                -5px -5px 5px rgba(0,0,0, 0.2);
+    text-decoration: none;
+    color: #267701;
+}
+nav .main .acc
+{
+    position: absolute;
+}
+nav .main .acc .acc_btn
+{
+    top: 12px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    position: fixed;
+    height: 20px;
+    width: 100px;
+    right: 20px;
+    padding: 5px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #319c00;
+    color: #cec;
+    border-radius: 4px;
+}
+.first_img
+{
+    width: 100vw;
+    height: 100vh;
+}
+.first_img img
+{
+    width: 100%;
+    height: 100%;
+}
