@@ -16,7 +16,10 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             print("log in Success.")
-            return render(request, "customers.html")
+            if Merchant_Details.objects.filter(username=username).exists():
+                return render(request, "client.html")
+            else:
+                return render(request, "customers.html")
         else:
             print("User is none.")
             return redirect("/account")

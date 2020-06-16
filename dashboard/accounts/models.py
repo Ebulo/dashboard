@@ -12,3 +12,6 @@ class Merchant_Details(models.Model):
     bank = models.IntegerField()
     acc_name = models.CharField(max_length=40)
     ifsc = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.username
